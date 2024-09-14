@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon</title>
+    <link rel="stylesheet" href="csscode.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+      <nav>
+        <p><img src="images/pokelogo.png" alt="pokemon logo"></p>
+        <h1>Pokemon</h1>
+      </nav>
+    </header>
+    <div class="menu">
+      <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Menu</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="https://pokemon.fandom.com/wiki/Pok%C3%A9mon_Wiki">Pokemon Wiki</a>
+          <a href="https://www.pokemon.com/us">Pokemon.com</a>
+        </div>
+      </div>
+      <div class = "rate">
+        <form for="rating">
+          <label for="rating">Rate this website:</label>
+          <input type="range" min="1" max="5" step="1" oninput="rateWebsite(this.value)" />
+        </form>
+        <p id="message"></p>
+      </div>
+    </div>
+      <div class="content">
+        <h2>Enter your favourite character:</h2>
+         Character name : <input type="text" id="userName"> 
+        <button  onclick="display()">Submit choice</button>
+        <p>The selected character was: <p id="printhere"></p></p>
+      </div>
+      <div class ="content1">
+        <h2>Play the game!</h2>
+        <p>Press the following button to play the game:</p>
+        <button onclick="selectCharacter()">Select Character</button>
+        <br>
+        <div id="character-info">
+        <img id="character-image" src="images/pokelogo.png" alt="Character" />
+        <div>
+        <p>The characters name is : <span id="character-name"></span></p>
+        <p>A short biography of the character is : <span id="character-bio"></span></p>
+      </div>
+      <br>
+      <button onclick="compareCharacters()">Compare</button>
+    </div>
+      <p id="displayed-fav"></p>
+    <footer>
+     Copyright &copy; 2021
+    </footer>
+    
+  <script src="javascript.js"></script>
+</body>
+</html>
